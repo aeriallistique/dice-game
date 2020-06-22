@@ -9,6 +9,7 @@ currentScore = 0;
 let setScorebtn = document.querySelector('#play-btn');
 let input = document.querySelector('#input');
 let inputValue;
+let setBtn = document.getElementById('play-btn');
 let rollBtn = document.getElementById('roll-btn');
 let holdBtn = document.getElementById('hold-btn');
 let newBtn = document.getElementById('new-btn');
@@ -47,6 +48,8 @@ holdBtn.addEventListener('click', function(){
         document.getElementById('player-' + player).classList.add('winner');
         img.classList.add('hide');
         img1.classList.add('hide');
+        setBtn.classList.add('hide');
+        
     }   
 });
 
@@ -59,6 +62,7 @@ newBtn.addEventListener('click', function(){
     inputValue = 0;
     globalScore[player] = 0;
     input.value = null;
+    setBtn.classList.remove('hide');
     nextPlayer();
     
     
@@ -95,4 +99,4 @@ setScorebtn.addEventListener('click', function(){
 });
     
     
-})
+})();
