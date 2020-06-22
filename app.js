@@ -1,3 +1,5 @@
+(function starter(){
+
 var roundScore, player, currentScore;
 let randomTotal;
 globalScore = [0, 0];
@@ -89,5 +91,8 @@ setScorebtn.addEventListener('click', function(){
     holdBtn.classList.remove('hide');
     rollBtn.classList.remove('hide');
     document.getElementById('player-' + player).classList.remove('winner');
+    
+});
+    
     
 })
